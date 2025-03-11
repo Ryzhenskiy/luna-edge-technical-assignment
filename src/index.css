@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type='text'] {
+  @apply mt-1 w-full rounded-lg border px-10 py-1 text-sm;
+}
+input[type='text']:focus {
+  @apply outline-none;
+}
+
+input[type='text']::placeholder {
+  @apply text-sm;
+}
+
+input[type='text']:hover {
+  @apply border border-indigo-800;
+}
+
+input[type='text']:focus {
+  @apply border border-indigo-800;
+}
+
+.error {
+  @apply text-red-500 text-sm;
+}
