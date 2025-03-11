@@ -1,0 +1,16 @@
+{
+  "rewrites": [
+    { "source": "/storybook/(.*)", "destination": "/storybook-static/$1" }
+  ],
+  "redirects": [
+    { "source": "/storybook", "destination": "/storybook/", "statusCode": 301 }
+  ],
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@vercel/static-build",
+      "config": { "distDir": "dist" }
+    },
+    { "src": "storybook-static/**", "use": "@vercel/static" }
+  ]
+}
